@@ -26,4 +26,12 @@
 	[sender replyToOpenOrPrint:NSApplicationDelegateReplySuccess];
 }
 
+- (BOOL)applicationShouldHandleReopen:(NSApplication *)sender hasVisibleWindows:(BOOL)flag {
+	if (flag == NO) {
+		[self.window makeKeyAndOrderFront:self];
+	}
+
+	return YES;
+}
+
 @end
