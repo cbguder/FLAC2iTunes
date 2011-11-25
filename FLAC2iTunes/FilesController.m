@@ -196,4 +196,27 @@
 	}
 }
 
+- (NSDragOperation)tableView:(NSTableView *)tableView validateDrop:(id<NSDraggingInfo>)info proposedRow:(NSInteger)row proposedDropOperation:(NSTableViewDropOperation)dropOperation {
+	[tableView setDropRow:[tableView numberOfRows] dropOperation:NSTableViewDropAbove];
+	return NSDragOperationGeneric;
+}
+
+- (BOOL)tableView:(NSTableView *)tableView acceptDrop:(id<NSDraggingInfo>)info row:(NSInteger)row dropOperation:(NSTableViewDropOperation)dropOperation {
+	NSArray *pasteboardItems = [[info draggingPasteboard] pasteboardItems];
+	NSMutableArray *items = [NSMutableArray arrayWithCapacity:[pasteboardItems count]];
+
+	for (NSPasteboardItem *item in pasteboardItems) {
+		NSString *URLString = [item stringForType:@"public.file-url"];
+
+		if (URLString) {
+			NSString *path = [[NSURL URLWithString:URLString] path];
+			[items addObject:path];
+		}
+	}
+
+	[self addFiles:items];
+
+	return YES;
+}
+
 @end

@@ -19,6 +19,7 @@
 }
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
+	[filesController.tableView registerForDraggedTypes:[NSArray arrayWithObject:NSFilenamesPboardType]];
 }
 
 - (void)application:(NSApplication *)sender openFiles:(NSArray *)filenames {
