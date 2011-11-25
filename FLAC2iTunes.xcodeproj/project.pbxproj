@@ -1,0 +1,381 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4C53AD0B147D6E79006FD9C1 /* libFLAC.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C53AD06147D6E79006FD9C1 /* libFLAC.a */; };
+		4C53AD0E147D6FCA006FD9C1 /* libogg.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C53AD0D147D6FCA006FD9C1 /* libogg.a */; };
+		4C53AD11147D72E9006FD9C1 /* FLACMetadataReader.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C53AD10147D72E9006FD9C1 /* FLACMetadataReader.m */; };
+		4C53AD14147D8653006FD9C1 /* FLACDecoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C53AD13147D8653006FD9C1 /* FLACDecoder.m */; };
+		4C63A8FB147E89CF00CE7C0A /* QueueEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C63A8FA147E89CF00CE7C0A /* QueueEntry.m */; };
+		4C8D5872147D3C69003C69BE /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C8D5871147D3C69003C69BE /* Cocoa.framework */; };
+		4C8D587C147D3C6A003C69BE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4C8D587A147D3C6A003C69BE /* InfoPlist.strings */; };
+		4C8D587E147D3C6A003C69BE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C8D587D147D3C6A003C69BE /* main.m */; };
+		4C8D5882147D3C6A003C69BE /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 4C8D5880147D3C6A003C69BE /* Credits.rtf */; };
+		4C8D5885147D3C6A003C69BE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C8D5884147D3C6A003C69BE /* AppDelegate.m */; };
+		4C8D5888147D3C6A003C69BE /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C8D5886147D3C6A003C69BE /* MainMenu.xib */; };
+		4C8D5890147D4B54003C69BE /* FilesController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C8D588F147D4B54003C69BE /* FilesController.m */; };
+		4CE06EE8147DD66E009A17DF /* NSString+MD5.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CE06EE7147DD66E009A17DF /* NSString+MD5.m */; };
+		4CE06EEA147DE43D009A17DF /* ScriptingBridge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CE06EE9147DE43D009A17DF /* ScriptingBridge.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		4C53AD01147D6E79006FD9C1 /* all.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = all.h; sourceTree = "<group>"; };
+		4C53AD02147D6E79006FD9C1 /* assert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = assert.h; sourceTree = "<group>"; };
+		4C53AD03147D6E79006FD9C1 /* callback.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = callback.h; sourceTree = "<group>"; };
+		4C53AD04147D6E79006FD9C1 /* export.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = export.h; sourceTree = "<group>"; };
+		4C53AD05147D6E79006FD9C1 /* format.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = format.h; sourceTree = "<group>"; };
+		4C53AD06147D6E79006FD9C1 /* libFLAC.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libFLAC.a; sourceTree = "<group>"; };
+		4C53AD07147D6E79006FD9C1 /* metadata.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = metadata.h; sourceTree = "<group>"; };
+		4C53AD08147D6E79006FD9C1 /* ordinals.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ordinals.h; sourceTree = "<group>"; };
+		4C53AD09147D6E79006FD9C1 /* stream_decoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stream_decoder.h; sourceTree = "<group>"; };
+		4C53AD0A147D6E79006FD9C1 /* stream_encoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stream_encoder.h; sourceTree = "<group>"; };
+		4C53AD0D147D6FCA006FD9C1 /* libogg.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libogg.a; sourceTree = "<group>"; };
+		4C53AD0F147D72E9006FD9C1 /* FLACMetadataReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLACMetadataReader.h; sourceTree = "<group>"; };
+		4C53AD10147D72E9006FD9C1 /* FLACMetadataReader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLACMetadataReader.m; sourceTree = "<group>"; };
+		4C53AD12147D8653006FD9C1 /* FLACDecoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLACDecoder.h; sourceTree = "<group>"; };
+		4C53AD13147D8653006FD9C1 /* FLACDecoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLACDecoder.m; sourceTree = "<group>"; };
+		4C63A8F9147E89CF00CE7C0A /* QueueEntry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QueueEntry.h; sourceTree = "<group>"; };
+		4C63A8FA147E89CF00CE7C0A /* QueueEntry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QueueEntry.m; sourceTree = "<group>"; };
+		4C8D586D147D3C69003C69BE /* FLAC2iTunes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FLAC2iTunes.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4C8D5871147D3C69003C69BE /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		4C8D5874147D3C69003C69BE /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		4C8D5875147D3C69003C69BE /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		4C8D5876147D3C69003C69BE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		4C8D5879147D3C6A003C69BE /* FLAC2iTunes-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FLAC2iTunes-Info.plist"; sourceTree = "<group>"; };
+		4C8D587B147D3C6A003C69BE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		4C8D587D147D3C6A003C69BE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		4C8D587F147D3C6A003C69BE /* FLAC2iTunes-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FLAC2iTunes-Prefix.pch"; sourceTree = "<group>"; };
+		4C8D5881147D3C6A003C69BE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		4C8D5883147D3C6A003C69BE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		4C8D5884147D3C6A003C69BE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		4C8D5887147D3C6A003C69BE /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		4C8D588E147D4B54003C69BE /* FilesController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FilesController.h; sourceTree = "<group>"; };
+		4C8D588F147D4B54003C69BE /* FilesController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FilesController.m; sourceTree = "<group>"; };
+		4CE06EE1147DD4C9009A17DF /* iTunes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iTunes.h; sourceTree = "<group>"; };
+		4CE06EE6147DD66E009A17DF /* NSString+MD5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+MD5.h"; sourceTree = "<group>"; };
+		4CE06EE7147DD66E009A17DF /* NSString+MD5.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MD5.m"; sourceTree = "<group>"; };
+		4CE06EE9147DE43D009A17DF /* ScriptingBridge.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ScriptingBridge.framework; path = System/Library/Frameworks/ScriptingBridge.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4C8D586A147D3C69003C69BE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4CE06EEA147DE43D009A17DF /* ScriptingBridge.framework in Frameworks */,
+				4C8D5872147D3C69003C69BE /* Cocoa.framework in Frameworks */,
+				4C53AD0B147D6E79006FD9C1 /* libFLAC.a in Frameworks */,
+				4C53AD0E147D6FCA006FD9C1 /* libogg.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4C53ACFF147D6E79006FD9C1 /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				4C53AD00147D6E79006FD9C1 /* FLAC */,
+			);
+			path = Libraries;
+			sourceTree = "<group>";
+		};
+		4C53AD00147D6E79006FD9C1 /* FLAC */ = {
+			isa = PBXGroup;
+			children = (
+				4C53AD06147D6E79006FD9C1 /* libFLAC.a */,
+				4C53AD0D147D6FCA006FD9C1 /* libogg.a */,
+				4C53AD01147D6E79006FD9C1 /* all.h */,
+				4C53AD02147D6E79006FD9C1 /* assert.h */,
+				4C53AD03147D6E79006FD9C1 /* callback.h */,
+				4C53AD04147D6E79006FD9C1 /* export.h */,
+				4C53AD05147D6E79006FD9C1 /* format.h */,
+				4C53AD07147D6E79006FD9C1 /* metadata.h */,
+				4C53AD08147D6E79006FD9C1 /* ordinals.h */,
+				4C53AD09147D6E79006FD9C1 /* stream_decoder.h */,
+				4C53AD0A147D6E79006FD9C1 /* stream_encoder.h */,
+			);
+			path = FLAC;
+			sourceTree = "<group>";
+		};
+		4C8D5862147D3C69003C69BE = {
+			isa = PBXGroup;
+			children = (
+				4C8D5877147D3C69003C69BE /* FLAC2iTunes */,
+				4C53ACFF147D6E79006FD9C1 /* Libraries */,
+				4C8D5870147D3C69003C69BE /* Frameworks */,
+				4C8D586E147D3C69003C69BE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4C8D586E147D3C69003C69BE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4C8D586D147D3C69003C69BE /* FLAC2iTunes.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4C8D5870147D3C69003C69BE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4C8D5871147D3C69003C69BE /* Cocoa.framework */,
+				4CE06EE9147DE43D009A17DF /* ScriptingBridge.framework */,
+				4C8D5873147D3C69003C69BE /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4C8D5873147D3C69003C69BE /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4C8D5874147D3C69003C69BE /* AppKit.framework */,
+				4C8D5875147D3C69003C69BE /* CoreData.framework */,
+				4C8D5876147D3C69003C69BE /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		4C8D5877147D3C69003C69BE /* FLAC2iTunes */ = {
+			isa = PBXGroup;
+			children = (
+				4C8D5883147D3C6A003C69BE /* AppDelegate.h */,
+				4C8D5884147D3C6A003C69BE /* AppDelegate.m */,
+				4C8D588E147D4B54003C69BE /* FilesController.h */,
+				4C8D588F147D4B54003C69BE /* FilesController.m */,
+				4C53AD12147D8653006FD9C1 /* FLACDecoder.h */,
+				4C53AD13147D8653006FD9C1 /* FLACDecoder.m */,
+				4C53AD0F147D72E9006FD9C1 /* FLACMetadataReader.h */,
+				4C53AD10147D72E9006FD9C1 /* FLACMetadataReader.m */,
+				4C63A8F9147E89CF00CE7C0A /* QueueEntry.h */,
+				4C63A8FA147E89CF00CE7C0A /* QueueEntry.m */,
+				4CE06EE6147DD66E009A17DF /* NSString+MD5.h */,
+				4CE06EE7147DD66E009A17DF /* NSString+MD5.m */,
+				4CE06EE1147DD4C9009A17DF /* iTunes.h */,
+				4C8D5886147D3C6A003C69BE /* MainMenu.xib */,
+				4C8D5878147D3C6A003C69BE /* Supporting Files */,
+			);
+			path = FLAC2iTunes;
+			sourceTree = "<group>";
+		};
+		4C8D5878147D3C6A003C69BE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				4C8D5879147D3C6A003C69BE /* FLAC2iTunes-Info.plist */,
+				4C8D587A147D3C6A003C69BE /* InfoPlist.strings */,
+				4C8D587D147D3C6A003C69BE /* main.m */,
+				4C8D587F147D3C6A003C69BE /* FLAC2iTunes-Prefix.pch */,
+				4C8D5880147D3C6A003C69BE /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4C8D586C147D3C69003C69BE /* FLAC2iTunes */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4C8D588B147D3C6A003C69BE /* Build configuration list for PBXNativeTarget "FLAC2iTunes" */;
+			buildPhases = (
+				4C8D5869147D3C69003C69BE /* Sources */,
+				4C8D586A147D3C69003C69BE /* Frameworks */,
+				4C8D586B147D3C69003C69BE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FLAC2iTunes;
+			productName = FLAC2iTunes;
+			productReference = 4C8D586D147D3C69003C69BE /* FLAC2iTunes.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4C8D5864147D3C69003C69BE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+				ORGANIZATIONNAME = CBG;
+			};
+			buildConfigurationList = 4C8D5867147D3C69003C69BE /* Build configuration list for PBXProject "FLAC2iTunes" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 4C8D5862147D3C69003C69BE;
+			productRefGroup = 4C8D586E147D3C69003C69BE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4C8D586C147D3C69003C69BE /* FLAC2iTunes */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4C8D586B147D3C69003C69BE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4C8D587C147D3C6A003C69BE /* InfoPlist.strings in Resources */,
+				4C8D5882147D3C6A003C69BE /* Credits.rtf in Resources */,
+				4C8D5888147D3C6A003C69BE /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4C8D5869147D3C69003C69BE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4C8D587E147D3C6A003C69BE /* main.m in Sources */,
+				4C8D5885147D3C6A003C69BE /* AppDelegate.m in Sources */,
+				4C8D5890147D4B54003C69BE /* FilesController.m in Sources */,
+				4C53AD11147D72E9006FD9C1 /* FLACMetadataReader.m in Sources */,
+				4C53AD14147D8653006FD9C1 /* FLACDecoder.m in Sources */,
+				4CE06EE8147DD66E009A17DF /* NSString+MD5.m in Sources */,
+				4C63A8FB147E89CF00CE7C0A /* QueueEntry.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		4C8D587A147D3C6A003C69BE /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4C8D587B147D3C6A003C69BE /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		4C8D5880147D3C6A003C69BE /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4C8D5881147D3C6A003C69BE /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		4C8D5886147D3C6A003C69BE /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4C8D5887147D3C6A003C69BE /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4C8D5889147D3C6A003C69BE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		4C8D588A147D3C6A003C69BE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		4C8D588C147D3C6A003C69BE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FLAC2iTunes/FLAC2iTunes-Prefix.pch";
+				INFOPLIST_FILE = "FLAC2iTunes/FLAC2iTunes-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Libraries/FLAC\"",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		4C8D588D147D3C6A003C69BE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FLAC2iTunes/FLAC2iTunes-Prefix.pch";
+				INFOPLIST_FILE = "FLAC2iTunes/FLAC2iTunes-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Libraries/FLAC\"",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4C8D5867147D3C69003C69BE /* Build configuration list for PBXProject "FLAC2iTunes" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4C8D5889147D3C6A003C69BE /* Debug */,
+				4C8D588A147D3C6A003C69BE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4C8D588B147D3C6A003C69BE /* Build configuration list for PBXNativeTarget "FLAC2iTunes" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4C8D588C147D3C6A003C69BE /* Debug */,
+				4C8D588D147D3C6A003C69BE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4C8D5864147D3C69003C69BE /* Project object */;
+}
