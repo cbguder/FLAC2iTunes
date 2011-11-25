@@ -1340,10 +1340,10 @@
 							<int key="NSToolbarItemVisibilityPriority">0</int>
 						</object>
 					</object>
-					<array class="NSMutableArray" key="NSToolbarIBAllowedItems">
+					<array key="NSToolbarIBAllowedItems">
 						<reference ref="553476693"/>
 					</array>
-					<array class="NSMutableArray" key="NSToolbarIBDefaultItems">
+					<array key="NSToolbarIBDefaultItems">
 						<reference ref="553476693"/>
 					</array>
 					<array key="NSToolbarIBSelectableItems" id="0"/>
