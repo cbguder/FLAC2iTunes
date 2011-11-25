@@ -87,8 +87,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4CE06EEA147DE43D009A17DF /* ScriptingBridge.framework in Frameworks */,
 				4C8D5872147D3C69003C69BE /* Cocoa.framework in Frameworks */,
+				4CE06EEA147DE43D009A17DF /* ScriptingBridge.framework in Frameworks */,
 				4C53AD0B147D6E79006FD9C1 /* libFLAC.a in Frameworks */,
 				4C53AD0E147D6FCA006FD9C1 /* libogg.a in Frameworks */,
 			);
