@@ -15,6 +15,6 @@
 }
 
 @property (assign) IBOutlet NSWindow *window;
-@property (assign) IBOutlet FilesController *filesController;
+@property (retain) IBOutlet FilesController *filesController;
 
 @end

@@ -14,10 +14,6 @@
 @synthesize window = _window;
 @synthesize filesController;
 
-- (void)dealloc {
-	[super dealloc];
-}
-
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
 	[filesController.tableView registerForDraggedTypes:[NSArray arrayWithObject:NSFilenamesPboardType]];
 }

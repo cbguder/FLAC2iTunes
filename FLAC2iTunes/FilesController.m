@@ -16,26 +16,19 @@
 
 - (id)init {
 	if ((self = [super init])) {
-		files = [[NSMutableArray alloc] init];
+		files = [NSMutableArray array];
 
 		operationQueue = [[NSOperationQueue alloc] init];
 		operationQueue.maxConcurrentOperationCount = 2;
 		[operationQueue addObserver:self forKeyPath:@"operationCount" options:0 context:nil];
 
-		iTunes = [[SBApplication applicationWithBundleIdentifier:@"com.apple.iTunes"] retain];
+		iTunes = [SBApplication applicationWithBundleIdentifier:@"com.apple.iTunes"];
 		[iTunes setTimeout:kNoTimeOut];
 	}
 
 	return self;
 }
 
-- (void)dealloc {
-	[operationQueue release];
-	[_tableView release];
-	[iTunes release];
-	[files release];
-	[super dealloc];
-}
 
 - (void)addFile:(NSString *)path {
 	if ([[[path pathExtension] lowercaseString] isEqualToString:@"flac"]) {
@@ -98,46 +91,47 @@
 }
 
 - (void)encodeAll {
-	NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
+	@autoreleasepool {
+		NSMutableArray *encodeQueue = [NSMutableArray arrayWithCapacity:[files count]];
+		NSMutableDictionary *hashMap = [NSMutableDictionary dictionaryWithCapacity:[files count]];
 
-	NSMutableArray *encodeQueue = [NSMutableArray arrayWithCapacity:[files count]];
-	NSMutableDictionary *hashMap = [NSMutableDictionary dictionaryWithCapacity:[files count]];
+		for (QueueEntry *entry in files) {
+			if (entry.status == QueueEntryStatusDecoded) {
+				[hashMap setObject:entry forKey:entry.pathHash];
+				[encodeQueue addObject:[NSURL fileURLWithPath:entry.decodedPath]];
 
-	for (QueueEntry *entry in files) {
-		if (entry.status == QueueEntryStatusDecoded) {
-			[hashMap setObject:entry forKey:entry.pathHash];
-			[encodeQueue addObject:[NSURL fileURLWithPath:entry.decodedPath]];
-
-			entry.status = QueueEntryStatusEncoding;
+				entry.status = QueueEntryStatusEncoding;
+			}
 		}
-	}
 
-	[self.tableView performSelectorOnMainThread:@selector(reloadData) withObject:nil waitUntilDone:NO];
+		[self.tableView performSelectorOnMainThread:@selector(reloadData) withObject:nil waitUntilDone:NO];
 
-	NSArray *tracks = (NSArray *)[iTunes convert:encodeQueue];
+		NSArray *tracks = (NSArray *)[iTunes convert:encodeQueue];
 
-	for (iTunesTrack *track in tracks) {
-		QueueEntry *entry = [hashMap objectForKey:track.name];
-		if (entry) {
-			NSDictionary *comments = entry.comments;
-			track.artist = [comments objectForKey:@"ARTIST"];
-			track.album = [comments objectForKey:@"ALBUM"];
-			track.name = [comments objectForKey:@"TITLE"];
-			track.genre = [comments objectForKey:@"GENRE"];
-			track.trackNumber = [[comments objectForKey:@"TRACKNUMBER"] integerValue];
-			track.trackCount = [[comments objectForKey:@"TRACKTOTAL"] integerValue];
-			track.discNumber = [[comments objectForKey:@"DISCNUMBER"] integerValue];
-			track.discCount = [[comments objectForKey:@"DISCTOTAL"] integerValue];
-			track.year = [[comments objectForKey:@"DATE"] integerValue];
+		for (iTunesTrack *track in tracks) {
+			QueueEntry *entry = [hashMap objectForKey:track.name];
+			if (entry) {
+				NSDictionary *comments = entry.comments;
+				track.artist = [comments objectForKey:@"ARTIST"];
+				track.albumArtist = [comments objectForKey:@"ALBUMARTIST"];
+				track.composer = [comments objectForKey:@"COMPOSER"];
+				track.album = [comments objectForKey:@"ALBUM"];
+				track.name = [comments objectForKey:@"TITLE"];
+				track.genre = [comments objectForKey:@"GENRE"];
+				track.compilation = [[comments objectForKey:@"COMPILATION"] boolValue];
+				track.trackNumber = [[comments objectForKey:@"TRACKNUMBER"] integerValue];
+				track.trackCount = [[comments objectForKey:@"TRACKTOTAL"] integerValue];
+				track.discNumber = [[comments objectForKey:@"DISCNUMBER"] integerValue];
+				track.discCount = [[comments objectForKey:@"DISCTOTAL"] integerValue];
+				track.year = [[comments objectForKey:@"DATE"] integerValue];
 
-			[[NSFileManager defaultManager] removeItemAtPath:entry.decodedPath error:nil];
-			entry.status = QueueEntryStatusDone;
+				[[NSFileManager defaultManager] removeItemAtPath:entry.decodedPath error:nil];
+				entry.status = QueueEntryStatusDone;
+			}
 		}
+
+		[self.tableView performSelectorOnMainThread:@selector(reloadData) withObject:nil waitUntilDone:NO];
 	}
-
-	[self.tableView performSelectorOnMainThread:@selector(reloadData) withObject:nil waitUntilDone:NO];
-
-	[pool release];
 }
 
 - (void)decodeEntry:(QueueEntry *)entry {

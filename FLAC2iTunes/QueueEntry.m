@@ -15,15 +15,7 @@
 @synthesize pathHash, decodedPath, comments, status;
 
 + (id)entryWithPath:(NSString *)path {
-	return [[[self alloc] initWithPath:path] autorelease];
-}
-
-- (void)dealloc {
-	[path release];
-	[pathHash release];
-	[decodedPath release];
-	[comments release];
-	[super dealloc];
+	return [[self alloc] initWithPath:path];
 }
 
 - (id)initWithPath:(NSString *)aPath {
@@ -38,28 +30,22 @@
 	id result;
 
 	@synchronized (self) {
-		result = [path retain];
+		result = path;
 	}
 
-	return [result autorelease];
+	return result;
 }
 
 - (void)setPath:(NSString *)aPath {
 	@synchronized (self) {
-		if (path != aPath) {
-			[path release];
-			path = [aPath copy];
+		path = [aPath copy];
 
-			[pathHash release];
-			pathHash = [[path MD5] retain];
+		pathHash = [path MD5];
 
-			[decodedPath release];
-			NSString *decodedFilename = [pathHash stringByAppendingPathExtension:@"wav"];
-			decodedPath = [[NSTemporaryDirectory() stringByAppendingPathComponent:decodedFilename] retain];
+		NSString *decodedFilename = [pathHash stringByAppendingPathExtension:@"wav"];
+		decodedPath = [NSTemporaryDirectory() stringByAppendingPathComponent:decodedFilename];
 
-			[comments release];
-			comments = [FLACMetadataDictionaryFromFile(path) retain];
-		}
+		comments = FLACMetadataDictionaryFromFile(path);
 	}
 }
 
