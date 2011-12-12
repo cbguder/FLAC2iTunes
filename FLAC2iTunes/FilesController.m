@@ -186,6 +186,17 @@
 			default: return nil;
 		}
 	} else {
+		if ([tableColumn.identifier isEqualToString:@"tracknumber"]) {
+			NSInteger trackNumber = [[entry.comments objectForKey:@"TRACKNUMBER"] integerValue];
+			NSInteger trackTotal = [[entry.comments objectForKey:@"TRACKTOTAL"] integerValue];
+
+			if (trackTotal < trackNumber) {
+				return [NSString stringWithFormat:@"%d", trackNumber];
+			} else {
+				return [NSString stringWithFormat:@"%d of %d", trackNumber, trackTotal];
+			}
+		}
+
 		return [entry.comments objectForKey:[tableColumn.identifier uppercaseString]];
 	}
 }

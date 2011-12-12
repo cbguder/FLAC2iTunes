@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4C0052FC148546AD0025EE1B /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C0052FB148546AD0025EE1B /* Sparkle.framework */; };
+		4C0052FE148547320025EE1B /* Sparkle.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4C0052FB148546AD0025EE1B /* Sparkle.framework */; };
 		4C53AD0B147D6E79006FD9C1 /* libFLAC.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C53AD06147D6E79006FD9C1 /* libFLAC.a */; };
 		4C53AD0E147D6FCA006FD9C1 /* libogg.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C53AD0D147D6FCA006FD9C1 /* libogg.a */; };
 		4C53AD11147D72E9006FD9C1 /* FLACMetadataReader.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C53AD10147D72E9006FD9C1 /* FLACMetadataReader.m */; };
