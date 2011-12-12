@@ -1321,8 +1321,8 @@
 							<object class="NSMutableString" key="NSToolbarItemIdentifier">
 								<characters key="NS.bytes">DC4B2AB0-1E31-437F-B9BC-DE9226360526</characters>
 							</object>
-							<string key="NSToolbarItemLabel">Decode</string>
-							<string key="NSToolbarItemPaletteLabel">Decode</string>
+							<string key="NSToolbarItemLabel">Convert</string>
+							<string key="NSToolbarItemPaletteLabel">Convert</string>
 							<string key="NSToolbarItemToolTip"/>
 							<nil key="NSToolbarItemView"/>
 							<object class="NSCustomResource" key="NSToolbarItemImage">
