@@ -39,7 +39,21 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		4C0052FD1485470A0025EE1B /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				4C0052FE148547320025EE1B /* Sparkle.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		4C0052FB148546AD0025EE1B /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Sparkle.framework; path = Libraries/Sparkle.framework; sourceTree = "<group>"; };
 		4C53AD01147D6E79006FD9C1 /* all.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = all.h; sourceTree = "<group>"; };
 		4C53AD02147D6E79006FD9C1 /* assert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = assert.h; sourceTree = "<group>"; };
 		4C53AD03147D6E79006FD9C1 /* callback.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = callback.h; sourceTree = "<group>"; };
@@ -91,6 +105,7 @@
 			files = (
 				4C8D5872147D3C69003C69BE /* Cocoa.framework in Frameworks */,
 				4CE06EEA147DE43D009A17DF /* ScriptingBridge.framework in Frameworks */,
+				4C0052FC148546AD0025EE1B /* Sparkle.framework in Frameworks */,
 				4C53AD0B147D6E79006FD9C1 /* libFLAC.a in Frameworks */,
 				4C53AD0E147D6FCA006FD9C1 /* libogg.a in Frameworks */,
 			);
@@ -160,6 +175,7 @@
 				4C8D5871147D3C69003C69BE /* Cocoa.framework */,
 				4CCA43E5147F2C6B00FCF420 /* SenTestingKit.framework */,
 				4CE06EE9147DE43D009A17DF /* ScriptingBridge.framework */,
+				4C0052FB148546AD0025EE1B /* Sparkle.framework */,
 				4C8D5873147D3C69003C69BE /* Other Frameworks */,
 			);
 			name = Frameworks;
@@ -238,6 +254,7 @@
 				4C8D5869147D3C69003C69BE /* Sources */,
 				4C8D586A147D3C69003C69BE /* Frameworks */,
 				4C8D586B147D3C69003C69BE /* Resources */,
+				4C0052FD1485470A0025EE1B /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -453,6 +470,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_ARC = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+					"\"$(SRCROOT)/Libraries\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FLAC2iTunes/FLAC2iTunes-Prefix.pch";
 				INFOPLIST_FILE = "FLAC2iTunes/FLAC2iTunes-Info.plist";
@@ -469,6 +491,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_ARC = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+					"\"$(SRCROOT)/Libraries\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FLAC2iTunes/FLAC2iTunes-Prefix.pch";
 				INFOPLIST_FILE = "FLAC2iTunes/FLAC2iTunes-Info.plist";
