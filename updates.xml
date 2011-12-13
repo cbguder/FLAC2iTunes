@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle"  xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>FLAC2iTunes Updates</title>
+    <link>https://github.com/cbguder/FLAC2iTunes</link>
+    <description>FLAC2iTunes Version History</description>
+    <language>en</language>
+    <item>
+      <title>Version 0.1 (build 7)</title>
+      <description><![CDATA[<ul><li>Adds support for automatic updates using Sparkle.</li></ul>]]></description>
+      <pubDate>Tue, 13 Dec 2011 19:35:15 +0000</pubDate>
+      <enclosure url="https://github.com/downloads/cbguder/FLAC2iTunes/FLAC2iTunes-0.1.7.zip"
+        sparkle:dsaSignature="MCwCFHyEMbEJmoJ2XUY2KZQt8eDuVbJ6AhQXwWY62GTdYN9HRUFq2O09i3wHlA=="
+        sparkle:shortVersionString="0.1"
+        sparkle:version="7"
+        length="501953"
+        type="application/octet-stream"
+      />
+    </item>
+  </channel>
+</rss>

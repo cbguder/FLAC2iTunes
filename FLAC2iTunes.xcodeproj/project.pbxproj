@@ -21,6 +21,7 @@
 		4C8D5885147D3C6A003C69BE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C8D5884147D3C6A003C69BE /* AppDelegate.m */; };
 		4C8D5888147D3C6A003C69BE /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C8D5886147D3C6A003C69BE /* MainMenu.xib */; };
 		4C8D5890147D4B54003C69BE /* FilesController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C8D588F147D4B54003C69BE /* FilesController.m */; };
+		4C96AA6D1497E48700E9DE15 /* dsa_pub.pem in Resources */ = {isa = PBXBuildFile; fileRef = 4C96AA6C1497E48700E9DE15 /* dsa_pub.pem */; };
 		4CCA43E6147F2C6B00FCF420 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CCA43E5147F2C6B00FCF420 /* SenTestingKit.framework */; };
 		4CCA43E7147F2C6B00FCF420 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C8D5871147D3C69003C69BE /* Cocoa.framework */; };
 		4CCA43ED147F2C6B00FCF420 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4CCA43EB147F2C6B00FCF420 /* InfoPlist.strings */; };
@@ -86,6 +87,7 @@
 		4C8D5887147D3C6A003C69BE /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		4C8D588E147D4B54003C69BE /* FilesController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FilesController.h; sourceTree = "<group>"; };
 		4C8D588F147D4B54003C69BE /* FilesController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FilesController.m; sourceTree = "<group>"; };
+		4C96AA6C1497E48700E9DE15 /* dsa_pub.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dsa_pub.pem; sourceTree = "<group>"; };
 		4CCA43E4147F2C6B00FCF420 /* FLAC2iTunesTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FLAC2iTunesTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CCA43E5147F2C6B00FCF420 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		4CCA43EA147F2C6B00FCF420 /* FLAC2iTunesTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FLAC2iTunesTests-Info.plist"; sourceTree = "<group>"; };
@@ -221,6 +223,7 @@
 				4C8D587D147D3C6A003C69BE /* main.m */,
 				4C8D587F147D3C6A003C69BE /* FLAC2iTunes-Prefix.pch */,
 				4C8D5880147D3C6A003C69BE /* Credits.rtf */,
+				4C96AA6C1497E48700E9DE15 /* dsa_pub.pem */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -319,6 +322,7 @@
 				4C8D587C147D3C6A003C69BE /* InfoPlist.strings in Resources */,
 				4C8D5882147D3C6A003C69BE /* Credits.rtf in Resources */,
 				4C8D5888147D3C6A003C69BE /* MainMenu.xib in Resources */,
+				4C96AA6D1497E48700E9DE15 /* dsa_pub.pem in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -423,7 +427,7 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 6;
+				CURRENT_PROJECT_VERSION = 7;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
@@ -451,7 +455,7 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				COPY_PHASE_STRIP = YES;
-				CURRENT_PROJECT_VERSION = 6;
+				CURRENT_PROJECT_VERSION = 7;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
