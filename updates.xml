@@ -6,6 +6,21 @@
     <description>FLAC2iTunes Version History</description>
     <language>en</language>
     <item>
+      <title>Version 0.1 (build 9)</title>
+      <description><![CDATA[<ul>
+        <li>Fixes "msng" tags using flexible comment to tag mapping.</li>
+        <li>Fixes status column not updating.</li>
+      </ul>]]></description>
+      <pubDate>Thu, 12 Jan 2012 12:07:38 +0000</pubDate>
+      <enclosure url="https://github.com/downloads/cbguder/FLAC2iTunes/FLAC2iTunes-0.1.9.zip"
+        sparkle:dsaSignature="MC0CFQDaXF1D385b12VwzldMGoeyhQ1KtgIUIluIz9VCgu97dwZH5uqB8UD2OxA="
+        sparkle:shortVersionString="0.1"
+        sparkle:version="9"
+        length="502630"
+        type="application/octet-stream"
+      />
+    </item>
+    <item>
       <title>Version 0.1 (build 7)</title>
       <description><![CDATA[<ul><li>Adds support for automatic updates using Sparkle.</li></ul>]]></description>
       <pubDate>Tue, 13 Dec 2011 19:35:15 +0000</pubDate>
