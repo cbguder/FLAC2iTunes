@@ -24,6 +24,8 @@
 
 		iTunes = [SBApplication applicationWithBundleIdentifier:@"com.apple.iTunes"];
 		[iTunes setTimeout:kNoTimeOut];
+
+		commentMap = [NSDictionary dictionaryWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"CommentMap" ofType:@"plist"]];
 	}
 
 	return self;
@@ -91,6 +93,30 @@
 							  columnIndexes:[NSIndexSet indexSetWithIndex:statusIndex]];
 }
 
+- (void)applyComments:(NSDictionary *)comments toTrack:(iTunesTrack *)track {
+	for (NSString *key in comments) {
+		NSDictionary *keyDesc = [commentMap objectForKey:key];
+
+		if (keyDesc) {
+			NSString *targetType = [keyDesc objectForKey:@"type"];
+			NSString *targetKey = [keyDesc objectForKey:@"key"];
+
+			NSString *stringValue = [comments objectForKey:key];
+			id value;
+
+			if ([targetType isEqualToString:@"integer"]) {
+				value = [NSNumber numberWithInteger:[stringValue integerValue]];
+			} else if ([targetType isEqualToString:@"boolean"]) {
+				value = [NSNumber numberWithBool:[stringValue boolValue]];
+			} else {
+				value = stringValue;
+			}
+
+			[track setValue:value forKey:targetKey];
+		}
+	}
+}
+
 - (void)encodeAll {
 	@autoreleasepool {
 		NSMutableArray *encodeQueue = [NSMutableArray arrayWithCapacity:[files count]];
@@ -112,20 +138,7 @@
 		for (iTunesTrack *track in tracks) {
 			QueueEntry *entry = [hashMap objectForKey:track.name];
 			if (entry) {
-				NSDictionary *comments = entry.comments;
-				track.artist = [comments objectForKey:@"ARTIST"];
-				track.albumArtist = [comments objectForKey:@"ALBUMARTIST"];
-				track.composer = [comments objectForKey:@"COMPOSER"];
-				track.album = [comments objectForKey:@"ALBUM"];
-				track.name = [comments objectForKey:@"TITLE"];
-				track.genre = [comments objectForKey:@"GENRE"];
-				track.compilation = [[comments objectForKey:@"COMPILATION"] boolValue];
-				track.trackNumber = [[comments objectForKey:@"TRACKNUMBER"] integerValue];
-				track.trackCount = [[comments objectForKey:@"TRACKTOTAL"] integerValue];
-				track.discNumber = [[comments objectForKey:@"DISCNUMBER"] integerValue];
-				track.discCount = [[comments objectForKey:@"DISCTOTAL"] integerValue];
-				track.year = [[comments objectForKey:@"DATE"] integerValue];
-
+				[self applyComments:entry.comments toTrack:track];
 				[[NSFileManager defaultManager] removeItemAtPath:entry.decodedPath error:nil];
 				entry.status = QueueEntryStatusDone;
 			}

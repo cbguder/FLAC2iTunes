@@ -15,6 +15,7 @@
 	NSOperationQueue *operationQueue;
 	NSTableView *_tableView;
 	NSMutableArray *files;
+	NSDictionary *commentMap;
 }
 
 @property (retain) IBOutlet NSTableView *tableView;

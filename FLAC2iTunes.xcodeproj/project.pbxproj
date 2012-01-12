@@ -28,6 +28,7 @@
 		4CCA43F0147F2C6B00FCF420 /* FLAC2iTunesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CCA43EF147F2C6B00FCF420 /* FLAC2iTunesTests.m */; };
 		4CE06EE8147DD66E009A17DF /* NSString+MD5.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CE06EE7147DD66E009A17DF /* NSString+MD5.m */; };
 		4CE06EEA147DE43D009A17DF /* ScriptingBridge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CE06EE9147DE43D009A17DF /* ScriptingBridge.framework */; };
+		4CF9681114BEFE0D0009F1C6 /* CommentMap.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4CF9681014BEFE0D0009F1C6 /* CommentMap.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -98,6 +99,7 @@
 		4CE06EE6147DD66E009A17DF /* NSString+MD5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+MD5.h"; sourceTree = "<group>"; };
 		4CE06EE7147DD66E009A17DF /* NSString+MD5.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MD5.m"; sourceTree = "<group>"; };
 		4CE06EE9147DE43D009A17DF /* ScriptingBridge.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ScriptingBridge.framework; path = System/Library/Frameworks/ScriptingBridge.framework; sourceTree = SDKROOT; };
+		4CF9681014BEFE0D0009F1C6 /* CommentMap.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = CommentMap.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -224,6 +226,7 @@
 				4C8D587F147D3C6A003C69BE /* FLAC2iTunes-Prefix.pch */,
 				4C8D5880147D3C6A003C69BE /* Credits.rtf */,
 				4C96AA6C1497E48700E9DE15 /* dsa_pub.pem */,
+				4CF9681014BEFE0D0009F1C6 /* CommentMap.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -323,6 +326,7 @@
 				4C8D5882147D3C6A003C69BE /* Credits.rtf in Resources */,
 				4C8D5888147D3C6A003C69BE /* MainMenu.xib in Resources */,
 				4C96AA6D1497E48700E9DE15 /* dsa_pub.pem in Resources */,
+				4CF9681114BEFE0D0009F1C6 /* CommentMap.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -427,7 +431,7 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 8;
+				CURRENT_PROJECT_VERSION = 9;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
@@ -455,7 +459,7 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				COPY_PHASE_STRIP = YES;
-				CURRENT_PROJECT_VERSION = 8;
+				CURRENT_PROJECT_VERSION = 9;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
