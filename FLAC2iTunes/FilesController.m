@@ -86,8 +86,9 @@
 
 - (void)refreshEntry:(QueueEntry *)entry {
 	NSInteger index = [files indexOfObject:entry];
+	NSInteger statusIndex = [self.tableView columnWithIdentifier:@"status"];
 	[self.tableView reloadDataForRowIndexes:[NSIndexSet indexSetWithIndex:index]
-							  columnIndexes:[NSIndexSet indexSetWithIndex:4]];
+							  columnIndexes:[NSIndexSet indexSetWithIndex:statusIndex]];
 }
 
 - (void)encodeAll {
