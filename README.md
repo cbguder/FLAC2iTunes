@@ -3,7 +3,7 @@ FLAC2iTunes
 
 FLAC2iTunes is a small application that imports FLAC files into iTunes using the currently selected encoder. Simply drag files or folders onto FLAC2iTunes and click convert.
 
-![FLAC2iTunes](http://f.cl.ly/items/2A150b2b3h0T2T3F1x09/FLAC2iTunes-0.1.7.png)
+<img src="http://f.cl.ly/items/3S1M1Z0f1Q1f112B3C41/FLAC2iTunes-0.1.7@2x.png" alt="FLAC2iTunes" width="851" height="539" />
 
 Known Issues
 ------------
