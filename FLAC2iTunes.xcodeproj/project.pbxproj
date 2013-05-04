@@ -22,24 +22,10 @@
 		4C8D5888147D3C6A003C69BE /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C8D5886147D3C6A003C69BE /* MainMenu.xib */; };
 		4C8D5890147D4B54003C69BE /* FilesController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C8D588F147D4B54003C69BE /* FilesController.m */; };
 		4C96AA6D1497E48700E9DE15 /* dsa_pub.pem in Resources */ = {isa = PBXBuildFile; fileRef = 4C96AA6C1497E48700E9DE15 /* dsa_pub.pem */; };
-		4CCA43E6147F2C6B00FCF420 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CCA43E5147F2C6B00FCF420 /* SenTestingKit.framework */; };
-		4CCA43E7147F2C6B00FCF420 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C8D5871147D3C69003C69BE /* Cocoa.framework */; };
-		4CCA43ED147F2C6B00FCF420 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4CCA43EB147F2C6B00FCF420 /* InfoPlist.strings */; };
-		4CCA43F0147F2C6B00FCF420 /* FLAC2iTunesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CCA43EF147F2C6B00FCF420 /* FLAC2iTunesTests.m */; };
 		4CE06EE8147DD66E009A17DF /* NSString+MD5.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CE06EE7147DD66E009A17DF /* NSString+MD5.m */; };
 		4CE06EEA147DE43D009A17DF /* ScriptingBridge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CE06EE9147DE43D009A17DF /* ScriptingBridge.framework */; };
 		4CF9681114BEFE0D0009F1C6 /* CommentMap.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4CF9681014BEFE0D0009F1C6 /* CommentMap.plist */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		4CCA441A147F30C900FCF420 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 4C8D5864147D3C69003C69BE /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 4C8D586C147D3C69003C69BE;
-			remoteInfo = FLAC2iTunes;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		4C0052FD1485470A0025EE1B /* CopyFiles */ = {
@@ -89,12 +75,7 @@
 		4C8D588E147D4B54003C69BE /* FilesController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FilesController.h; sourceTree = "<group>"; };
 		4C8D588F147D4B54003C69BE /* FilesController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FilesController.m; sourceTree = "<group>"; };
 		4C96AA6C1497E48700E9DE15 /* dsa_pub.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dsa_pub.pem; sourceTree = "<group>"; };
-		4CCA43E4147F2C6B00FCF420 /* FLAC2iTunesTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FLAC2iTunesTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CCA43E5147F2C6B00FCF420 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		4CCA43EA147F2C6B00FCF420 /* FLAC2iTunesTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FLAC2iTunesTests-Info.plist"; sourceTree = "<group>"; };
-		4CCA43EC147F2C6B00FCF420 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		4CCA43EE147F2C6B00FCF420 /* FLAC2iTunesTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FLAC2iTunesTests.h; sourceTree = "<group>"; };
-		4CCA43EF147F2C6B00FCF420 /* FLAC2iTunesTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FLAC2iTunesTests.m; sourceTree = "<group>"; };
 		4CE06EE1147DD4C9009A17DF /* iTunes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iTunes.h; sourceTree = "<group>"; };
 		4CE06EE6147DD66E009A17DF /* NSString+MD5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+MD5.h"; sourceTree = "<group>"; };
 		4CE06EE7147DD66E009A17DF /* NSString+MD5.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MD5.m"; sourceTree = "<group>"; };
@@ -112,15 +93,6 @@
 				4C0052FC148546AD0025EE1B /* Sparkle.framework in Frameworks */,
 				4C53AD0B147D6E79006FD9C1 /* libFLAC.a in Frameworks */,
 				4C53AD0E147D6FCA006FD9C1 /* libogg.a in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		4CCA43E0147F2C6B00FCF420 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				4CCA43E6147F2C6B00FCF420 /* SenTestingKit.framework in Frameworks */,
-				4CCA43E7147F2C6B00FCF420 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -157,7 +129,6 @@
 			isa = PBXGroup;
 			children = (
 				4C8D5877147D3C69003C69BE /* FLAC2iTunes */,
-				4CCA43E8147F2C6B00FCF420 /* FLAC2iTunesTests */,
 				4C53ACFF147D6E79006FD9C1 /* Libraries */,
 				4C8D5870147D3C69003C69BE /* Frameworks */,
 				4C8D586E147D3C69003C69BE /* Products */,
@@ -168,7 +139,6 @@
 			isa = PBXGroup;
 			children = (
 				4C8D586D147D3C69003C69BE /* FLAC2iTunes.app */,
-				4CCA43E4147F2C6B00FCF420 /* FLAC2iTunesTests.octest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -231,25 +201,6 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		4CCA43E8147F2C6B00FCF420 /* FLAC2iTunesTests */ = {
-			isa = PBXGroup;
-			children = (
-				4CCA43EE147F2C6B00FCF420 /* FLAC2iTunesTests.h */,
-				4CCA43EF147F2C6B00FCF420 /* FLAC2iTunesTests.m */,
-				4CCA43E9147F2C6B00FCF420 /* Supporting Files */,
-			);
-			path = FLAC2iTunesTests;
-			sourceTree = "<group>";
-		};
-		4CCA43E9147F2C6B00FCF420 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				4CCA43EA147F2C6B00FCF420 /* FLAC2iTunesTests-Info.plist */,
-				4CCA43EB147F2C6B00FCF420 /* InfoPlist.strings */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -270,25 +221,6 @@
 			productName = FLAC2iTunes;
 			productReference = 4C8D586D147D3C69003C69BE /* FLAC2iTunes.app */;
 			productType = "com.apple.product-type.application";
-		};
-		4CCA43E3147F2C6B00FCF420 /* FLAC2iTunesTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 4CCA43F4147F2C6B00FCF420 /* Build configuration list for PBXNativeTarget "FLAC2iTunesTests" */;
-			buildPhases = (
-				4CCA43DF147F2C6B00FCF420 /* Sources */,
-				4CCA43E0147F2C6B00FCF420 /* Frameworks */,
-				4CCA43E1147F2C6B00FCF420 /* Resources */,
-				4CCA43E2147F2C6B00FCF420 /* ShellScript */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				4CCA441B147F30C900FCF420 /* PBXTargetDependency */,
-			);
-			name = FLAC2iTunesTests;
-			productName = FLAC2iTunesTests;
-			productReference = 4CCA43E4147F2C6B00FCF420 /* FLAC2iTunesTests.octest */;
-			productType = "com.apple.product-type.bundle";
 		};
 /* End PBXNativeTarget section */
 
@@ -312,7 +244,6 @@
 			projectRoot = "";
 			targets = (
 				4C8D586C147D3C69003C69BE /* FLAC2iTunes */,
-				4CCA43E3147F2C6B00FCF420 /* FLAC2iTunesTests */,
 			);
 		};
 /* End PBXProject section */
@@ -330,31 +261,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		4CCA43E1147F2C6B00FCF420 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				4CCA43ED147F2C6B00FCF420 /* InfoPlist.strings in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		4CCA43E2147F2C6B00FCF420 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		4C8D5869147D3C69003C69BE /* Sources */ = {
@@ -371,23 +278,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		4CCA43DF147F2C6B00FCF420 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				4CCA43F0147F2C6B00FCF420 /* FLAC2iTunesTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		4CCA441B147F30C900FCF420 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 4C8D586C147D3C69003C69BE /* FLAC2iTunes */;
-			targetProxy = 4CCA441A147F30C900FCF420 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		4C8D587A147D3C6A003C69BE /* InfoPlist.strings */ = {
@@ -412,14 +303,6 @@
 				4C8D5887147D3C6A003C69BE /* en */,
 			);
 			name = MainMenu.xib;
-			sourceTree = "<group>";
-		};
-		4CCA43EB147F2C6B00FCF420 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				4CCA43EC147F2C6B00FCF420 /* en */,
-			);
-			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -528,38 +411,6 @@
 			};
 			name = Release;
 		};
-		4CCA43F2147F2C6B00FCF420 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/FLAC2iTunes.app/Contents/MacOS/FLAC2iTunes";
-				CLANG_ENABLE_OBJC_ARC = YES;
-				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "FLAC2iTunes/FLAC2iTunes-Prefix.pch";
-				INFOPLIST_FILE = "FLAC2iTunesTests/FLAC2iTunesTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = octest;
-			};
-			name = Debug;
-		};
-		4CCA43F3147F2C6B00FCF420 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/FLAC2iTunes.app/Contents/MacOS/FLAC2iTunes";
-				CLANG_ENABLE_OBJC_ARC = YES;
-				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "FLAC2iTunes/FLAC2iTunes-Prefix.pch";
-				INFOPLIST_FILE = "FLAC2iTunesTests/FLAC2iTunesTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = octest;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -577,15 +428,6 @@
 			buildConfigurations = (
 				4C8D588C147D3C6A003C69BE /* Debug */,
 				4C8D588D147D3C6A003C69BE /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		4CCA43F4147F2C6B00FCF420 /* Build configuration list for PBXNativeTarget "FLAC2iTunesTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				4CCA43F2147F2C6B00FCF420 /* Debug */,
-				4CCA43F3147F2C6B00FCF420 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
