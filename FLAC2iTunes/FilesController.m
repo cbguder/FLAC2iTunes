@@ -25,7 +25,8 @@
 		iTunes = [SBApplication applicationWithBundleIdentifier:@"com.apple.iTunes"];
 		[iTunes setTimeout:kNoTimeOut];
 
-		commentMap = [NSDictionary dictionaryWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"CommentMap" ofType:@"plist"]];
+		NSString *commentMapPath = [[NSBundle mainBundle] pathForResource:@"CommentMap" ofType:@"plist"];
+		commentMap = [NSDictionary dictionaryWithContentsOfFile:commentMapPath];
 	}
 
 	return self;
@@ -40,7 +41,7 @@
 
 - (void)addDirectory:(NSString *)path {
 	NSDirectoryEnumerator *enumerator = [[NSFileManager defaultManager] enumeratorAtURL:[NSURL fileURLWithPath:path]
-															 includingPropertiesForKeys:[NSArray arrayWithObjects:NSURLNameKey, NSURLIsDirectoryKey, nil]
+															 includingPropertiesForKeys:@[NSURLNameKey, NSURLIsDirectoryKey]
 																				options:NSDirectoryEnumerationSkipsHiddenFiles
 																		   errorHandler:nil];
 	NSNumber *isDirectory;
@@ -95,13 +96,13 @@
 
 - (void)applyComments:(NSDictionary *)comments toTrack:(iTunesTrack *)track {
 	for (NSString *key in comments) {
-		NSDictionary *keyDesc = [commentMap objectForKey:key];
+		NSDictionary *keyDesc = commentMap[key];
 
 		if (keyDesc) {
-			NSString *targetType = [keyDesc objectForKey:@"type"];
-			NSString *targetKey = [keyDesc objectForKey:@"key"];
+			NSString *targetType = keyDesc[@"type"];
+			NSString *targetKey = keyDesc[@"key"];
 
-			NSString *stringValue = [comments objectForKey:key];
+			NSString *stringValue = comments[key];
 			id value;
 
 			if ([targetType isEqualToString:@"integer"]) {
@@ -136,7 +137,7 @@
 		NSArray *tracks = (NSArray *)[iTunes convert:encodeQueue];
 
 		for (iTunesTrack *track in tracks) {
-			QueueEntry *entry = [hashMap objectForKey:track.name];
+			QueueEntry *entry = hashMap[track.name];
 			if (entry) {
 				[self applyComments:entry.comments toTrack:track];
 				[[NSFileManager defaultManager] removeItemAtPath:entry.decodedPath error:nil];
@@ -185,7 +186,7 @@
 }
 
 - (id)tableView:(NSTableView *)tableView objectValueForTableColumn:(NSTableColumn *)tableColumn row:(NSInteger)row {
-	QueueEntry *entry = [files objectAtIndex:row];
+	QueueEntry *entry = files[row];
 
 	if ([tableColumn.identifier isEqualToString:@"path"]) {
 		return [entry.path lastPathComponent];
@@ -201,8 +202,8 @@
 		}
 	} else {
 		if ([tableColumn.identifier isEqualToString:@"tracknumber"]) {
-			NSInteger trackNumber = [[entry.comments objectForKey:@"TRACKNUMBER"] integerValue];
-			NSInteger trackTotal = [[entry.comments objectForKey:@"TRACKTOTAL"] integerValue];
+			NSInteger trackNumber = [entry.comments[@"TRACKNUMBER"] integerValue];
+			NSInteger trackTotal = [entry.comments[@"TRACKTOTAL"] integerValue];
 
 			if (trackTotal < trackNumber) {
 				return [NSString stringWithFormat:@"%ld", trackNumber];
@@ -211,7 +212,7 @@
 			}
 		}
 
-		return [entry.comments objectForKey:[tableColumn.identifier uppercaseString]];
+		return entry.comments[[tableColumn.identifier uppercaseString]];
 	}
 }
 

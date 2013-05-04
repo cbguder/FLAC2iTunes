@@ -45,11 +45,11 @@ NSDictionary * FLACMetadataDictionaryFromFile(NSString *path) {
 
 		if (partCount < 2) continue;
 
-		NSString *key = [[parts objectAtIndex:0] uppercaseString];
+		NSString *key = [parts[0] uppercaseString];
 		NSString *value = nil;
 
 		if (partCount == 2) {
-			value = [parts objectAtIndex:1];
+			value = parts[1];
 		} else {
 			value = [[parts subarrayWithRange:NSMakeRange(1, partCount - 1)] componentsJoinedByString:@"="];
 		}

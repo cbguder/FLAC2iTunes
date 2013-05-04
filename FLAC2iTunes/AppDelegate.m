@@ -15,7 +15,7 @@
 @synthesize filesController;
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
-	[filesController.tableView registerForDraggedTypes:[NSArray arrayWithObject:NSFilenamesPboardType]];
+	[filesController.tableView registerForDraggedTypes:@[NSFilenamesPboardType]];
 }
 
 - (void)application:(NSApplication *)sender openFiles:(NSArray *)filenames {
