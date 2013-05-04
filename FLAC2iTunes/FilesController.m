@@ -19,7 +19,7 @@
 		files = [NSMutableArray array];
 
 		operationQueue = [[NSOperationQueue alloc] init];
-		operationQueue.maxConcurrentOperationCount = 2;
+		operationQueue.maxConcurrentOperationCount = [[NSProcessInfo processInfo] processorCount];
 		[operationQueue addObserver:self forKeyPath:@"operationCount" options:0 context:nil];
 
 		iTunes = [SBApplication applicationWithBundleIdentifier:@"com.apple.iTunes"];
