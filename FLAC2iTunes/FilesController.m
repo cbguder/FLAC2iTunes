@@ -77,7 +77,7 @@
 		NSString *badgeLabel = nil;
 
 		if (operationQueue.operationCount > 0) {
-			badgeLabel = [NSString stringWithFormat:@"%d", operationQueue.operationCount];
+			badgeLabel = [NSString stringWithFormat:@"%ld", operationQueue.operationCount];
 		} else {
 			[self performSelectorInBackground:@selector(encodeAll) withObject:nil];
 		}
@@ -205,9 +205,9 @@
 			NSInteger trackTotal = [[entry.comments objectForKey:@"TRACKTOTAL"] integerValue];
 
 			if (trackTotal < trackNumber) {
-				return [NSString stringWithFormat:@"%d", trackNumber];
+				return [NSString stringWithFormat:@"%ld", trackNumber];
 			} else {
-				return [NSString stringWithFormat:@"%d of %d", trackNumber, trackTotal];
+				return [NSString stringWithFormat:@"%ld of %ld", trackNumber, trackTotal];
 			}
 		}
 
