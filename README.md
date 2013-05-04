@@ -5,6 +5,11 @@ FLAC2iTunes is a small application that imports FLAC files into iTunes using the
 
 <img src="http://f.cl.ly/items/3S1M1Z0f1Q1f112B3C41/FLAC2iTunes-0.1.7@2x.png" alt="FLAC2iTunes" width="851" height="539" />
 
+Download
+--------
+
+[FLAC2iTunes v0.1.10](https://s3.amazonaws.com/flac2itunes/FLAC2iTunes-0.1.10.zip)
+
 Known Issues
 ------------
 

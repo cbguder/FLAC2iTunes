@@ -6,6 +6,20 @@
     <description>FLAC2iTunes Version History</description>
     <language>en</language>
     <item>
+      <title>Version 0.1 (build 10)</title>
+      <description><![CDATA[<ul>
+        <li>Uses all available cores for decoding.</li>
+      </ul>]]></description>
+      <pubDate>Sat, 04 May 2013 17:58:26 -0000</pubDate>
+      <enclosure url="https://s3.amazonaws.com/flac2itunes/FLAC2iTunes-0.1.10.zip"
+        sparkle:dsaSignature="MC0CFHYmVwT+5RbVc6NG8Z96OLfrl7JYAhUAjW2mHizyxKw0p7TB6rmDaDGYtbE="
+        sparkle:shortVersionString="0.1"
+        sparkle:version="10"
+        length="505414"
+        type="application/octet-stream"
+      />
+    </item>
+    <item>
       <title>Version 0.1 (build 9)</title>
       <description><![CDATA[<ul>
         <li>Fixes "msng" tags using flexible comment to tag mapping.</li>
