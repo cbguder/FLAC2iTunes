@@ -11,11 +11,11 @@
 #import "iTunes.h"
 
 @interface FilesController : NSObject <NSTableViewDataSource> {
-	iTunesApplication *iTunes;
-	NSOperationQueue *operationQueue;
-	NSTableView *_tableView;
-	NSMutableArray *files;
-	NSDictionary *commentMap;
+    iTunesApplication *iTunes;
+    NSOperationQueue *operationQueue;
+    NSTableView *_tableView;
+    NSMutableArray *files;
+    NSDictionary *commentMap;
 }
 
 @property (retain) IBOutlet NSTableView *tableView;

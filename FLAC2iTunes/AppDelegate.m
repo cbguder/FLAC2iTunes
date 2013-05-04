@@ -15,20 +15,20 @@
 @synthesize filesController;
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
-	[filesController.tableView registerForDraggedTypes:@[NSFilenamesPboardType]];
+    [filesController.tableView registerForDraggedTypes:@[NSFilenamesPboardType]];
 }
 
 - (void)application:(NSApplication *)sender openFiles:(NSArray *)filenames {
-	[filesController addFiles:filenames];
-	[sender replyToOpenOrPrint:NSApplicationDelegateReplySuccess];
+    [filesController addFiles:filenames];
+    [sender replyToOpenOrPrint:NSApplicationDelegateReplySuccess];
 }
 
 - (BOOL)applicationShouldHandleReopen:(NSApplication *)sender hasVisibleWindows:(BOOL)flag {
-	if (flag == NO) {
-		[self.window makeKeyAndOrderFront:self];
-	}
+    if (flag == NO) {
+        [self.window makeKeyAndOrderFront:self];
+    }
 
-	return YES;
+    return YES;
 }
 
 @end

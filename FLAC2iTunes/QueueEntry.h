@@ -9,20 +9,20 @@
 #import <Foundation/Foundation.h>
 
 typedef enum {
-	QueueEntryStatusWaiting,
-	QueueEntryStatusDecoding,
-	QueueEntryStatusDecoded,
-	QueueEntryStatusFailed,
-	QueueEntryStatusEncoding,
-	QueueEntryStatusDone
+    QueueEntryStatusWaiting,
+    QueueEntryStatusDecoding,
+    QueueEntryStatusDecoded,
+    QueueEntryStatusFailed,
+    QueueEntryStatusEncoding,
+    QueueEntryStatusDone
 } QueueEntryStatus;
 
 @interface QueueEntry : NSObject {
-	NSString *path;
-	NSString *pathHash;
-	NSString *decodedPath;
-	NSDictionary *comments;
-	QueueEntryStatus status;
+    NSString *path;
+    NSString *pathHash;
+    NSString *decodedPath;
+    NSDictionary *comments;
+    QueueEntryStatus status;
 }
 
 @property (copy) NSString *path;

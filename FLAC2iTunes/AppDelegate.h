@@ -11,7 +11,7 @@
 @class FilesController;
 
 @interface AppDelegate : NSObject <NSApplicationDelegate, NSTableViewDataSource> {
-	FilesController *filesController;
+    FilesController *filesController;
 }
 
 @property (assign) IBOutlet NSWindow *window;
