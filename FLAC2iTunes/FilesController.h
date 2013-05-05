@@ -23,5 +23,6 @@
 - (void)addFiles:(NSArray *)filenames;
 
 - (IBAction)startDecoding:(id)sender;
+- (IBAction)fetchMetadata:(id)sender;
 
 @end

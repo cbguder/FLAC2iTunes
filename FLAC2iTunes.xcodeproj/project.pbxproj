@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		4C0052FC148546AD0025EE1B /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C0052FB148546AD0025EE1B /* Sparkle.framework */; };
 		4C0052FE148547320025EE1B /* Sparkle.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4C0052FB148546AD0025EE1B /* Sparkle.framework */; };
+		4C0339381736FA5E00A74C4B /* iTunesMetadataFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C0339371736FA5E00A74C4B /* iTunesMetadataFetcher.m */; };
 		4C53AD0B147D6E79006FD9C1 /* libFLAC.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C53AD06147D6E79006FD9C1 /* libFLAC.a */; };
 		4C53AD0E147D6FCA006FD9C1 /* libogg.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C53AD0D147D6FCA006FD9C1 /* libogg.a */; };
 		4C53AD11147D72E9006FD9C1 /* FLACMetadataReader.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C53AD10147D72E9006FD9C1 /* FLACMetadataReader.m */; };
@@ -42,6 +43,8 @@
 
 /* Begin PBXFileReference section */
 		4C0052FB148546AD0025EE1B /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Sparkle.framework; path = Libraries/Sparkle.framework; sourceTree = "<group>"; };
+		4C0339361736FA5E00A74C4B /* iTunesMetadataFetcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iTunesMetadataFetcher.h; sourceTree = "<group>"; };
+		4C0339371736FA5E00A74C4B /* iTunesMetadataFetcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iTunesMetadataFetcher.m; sourceTree = "<group>"; };
 		4C53AD01147D6E79006FD9C1 /* all.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = all.h; sourceTree = "<group>"; };
 		4C53AD02147D6E79006FD9C1 /* assert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = assert.h; sourceTree = "<group>"; };
 		4C53AD03147D6E79006FD9C1 /* callback.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = callback.h; sourceTree = "<group>"; };
@@ -176,12 +179,14 @@
 				4C53AD13147D8653006FD9C1 /* FLACDecoder.m */,
 				4C53AD0F147D72E9006FD9C1 /* FLACMetadataReader.h */,
 				4C53AD10147D72E9006FD9C1 /* FLACMetadataReader.m */,
-				4C63A8F9147E89CF00CE7C0A /* QueueEntry.h */,
-				4C63A8FA147E89CF00CE7C0A /* QueueEntry.m */,
+				4CE06EE1147DD4C9009A17DF /* iTunes.h */,
+				4C0339361736FA5E00A74C4B /* iTunesMetadataFetcher.h */,
+				4C0339371736FA5E00A74C4B /* iTunesMetadataFetcher.m */,
+				4C8D5886147D3C6A003C69BE /* MainMenu.xib */,
 				4CE06EE6147DD66E009A17DF /* NSString+MD5.h */,
 				4CE06EE7147DD66E009A17DF /* NSString+MD5.m */,
-				4CE06EE1147DD4C9009A17DF /* iTunes.h */,
-				4C8D5886147D3C6A003C69BE /* MainMenu.xib */,
+				4C63A8F9147E89CF00CE7C0A /* QueueEntry.h */,
+				4C63A8FA147E89CF00CE7C0A /* QueueEntry.m */,
 				4C8D5878147D3C6A003C69BE /* Supporting Files */,
 			);
 			path = FLAC2iTunes;
@@ -275,6 +280,7 @@
 				4C53AD14147D8653006FD9C1 /* FLACDecoder.m in Sources */,
 				4CE06EE8147DD66E009A17DF /* NSString+MD5.m in Sources */,
 				4C63A8FB147E89CF00CE7C0A /* QueueEntry.m in Sources */,
+				4C0339381736FA5E00A74C4B /* iTunesMetadataFetcher.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

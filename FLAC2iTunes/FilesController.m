@@ -9,6 +9,7 @@
 #import "FilesController.h"
 #import "FLACDecoder.h"
 #import "QueueEntry.h"
+#import "iTunesMetadataFetcher.h"
 
 @implementation FilesController
 
@@ -177,6 +178,40 @@
 
     [self.tableView reloadData];
     [operationQueue setSuspended:NO];
+}
+
+- (void)fetchMetadata:(id)sender {
+    NSAlert *alert = [NSAlert alertWithMessageText:@"Fetch Metadata From iTunes"
+                                     defaultButton:@"OK"
+                                   alternateButton:@"Cancel"
+                                       otherButton:nil
+                         informativeTextWithFormat:@"Enter iTunes Store URL:"];
+
+    NSTextField *input = [[NSTextField alloc] initWithFrame:NSMakeRect(0, 0, 300, 24)];
+    [alert setAccessoryView:input];
+
+    NSInteger button = [alert runModal];
+
+    if (button != NSAlertDefaultReturn) {
+        return;
+    }
+
+    [input validateEditing];
+
+    NSURL *URL = [NSURL URLWithString:[input stringValue]];
+
+    if (!([URL.scheme isEqualToString:@"https"] && [URL.host isEqualToString:@"itunes.apple.com"])) {
+        return;
+    }
+
+    NSArray *comments = [iTunesMetadataFetcher fetchMetadataFromAlbumURL:URL];
+
+    for (int i = 0; i < [files count]; i++) {
+        QueueEntry *entry = files[i];
+        entry.comments = comments[i];
+    }
+
+    [self.tableView reloadData];
 }
 
 #pragma mark - Table view data source
