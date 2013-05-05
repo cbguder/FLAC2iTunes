@@ -190,7 +190,9 @@
 
     if ([tableColumn.identifier isEqualToString:@"path"]) {
         return [entry.path lastPathComponent];
-    } else if ([tableColumn.identifier isEqualToString:@"status"]) {
+    }
+
+    if ([tableColumn.identifier isEqualToString:@"status"]) {
         switch (entry.status) {
             case QueueEntryStatusDecoded: return @"Decoded";
             case QueueEntryStatusDecoding: return @"Decoding";
@@ -200,20 +202,20 @@
             case QueueEntryStatusWaiting: return @"Waiting";
             default: return nil;
         }
-    } else {
-        if ([tableColumn.identifier isEqualToString:@"tracknumber"]) {
-            NSInteger trackNumber = [entry.comments[@"TRACKNUMBER"] integerValue];
-            NSInteger trackTotal = [entry.comments[@"TRACKTOTAL"] integerValue];
-
-            if (trackTotal < trackNumber) {
-                return [NSString stringWithFormat:@"%ld", trackNumber];
-            } else {
-                return [NSString stringWithFormat:@"%ld of %ld", trackNumber, trackTotal];
-            }
-        }
-
-        return entry.comments[[tableColumn.identifier uppercaseString]];
     }
+
+    if ([tableColumn.identifier isEqualToString:@"tracknumber"]) {
+        NSInteger trackNumber = [entry.comments[@"TRACKNUMBER"] integerValue];
+        NSInteger trackTotal = [entry.comments[@"TRACKTOTAL"] integerValue];
+
+        if (trackTotal < trackNumber) {
+            return [NSString stringWithFormat:@"%ld", trackNumber];
+        } else {
+            return [NSString stringWithFormat:@"%ld of %ld", trackNumber, trackTotal];
+        }
+    }
+
+    return entry.comments[[tableColumn.identifier uppercaseString]];
 }
 
 - (NSDragOperation)tableView:(NSTableView *)tableView validateDrop:(id<NSDraggingInfo>)info proposedRow:(NSInteger)row proposedDropOperation:(NSTableViewDropOperation)dropOperation {
