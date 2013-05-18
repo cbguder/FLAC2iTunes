@@ -43,7 +43,7 @@
 
     NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:jsonData options:0 error:nil];
 
-    NSDictionary *results = dict[@"pageData"][@"storePlatformData"][@"product"][@"results"];
+    NSDictionary *results = dict[@"pageData"][@"storePlatformData"][@"product-dv"][@"results"];
 
     NSMutableArray *comments = nil;
 
@@ -57,24 +57,26 @@
         @"TRACKNUMBER": @"trackNumber"
     };
 
-    for (NSDictionary *result in [results allValues]) {
-        comments = [NSMutableArray arrayWithCapacity:[result[@"childrenIds"] count]];
+    comments = [NSMutableArray array];
 
+    for (NSDictionary *result in [results allValues]) {
         for (id childId in result[@"childrenIds"]) {
             NSString *childKey = [NSString stringWithFormat:@"%@", childId];
             NSDictionary *child = result[@"children"][childKey];
 
-            NSMutableDictionary *childComments = [NSMutableDictionary dictionaryWithCapacity:7];
-
-            for (NSString *flacKey in commentMap) {
-                id value = [child valueForKeyPath:commentMap[flacKey]];
-
-                if (value) {
-                    childComments[flacKey] = value;
+            if ([child[@"kind"] isEqualToString:@"song"]) {
+                NSMutableDictionary *childComments = [NSMutableDictionary dictionaryWithCapacity:7];
+                
+                for (NSString *flacKey in commentMap) {
+                    id value = [child valueForKeyPath:commentMap[flacKey]];
+                    
+                    if (value) {
+                        childComments[flacKey] = value;
+                    }
                 }
+                
+                [comments addObject:childComments];
             }
-
-            [comments addObject:childComments];
         }
     }
 
