@@ -6,6 +6,20 @@
     <description>FLAC2iTunes Version History</description>
     <language>en</language>
     <item>
+      <title>Version 0.1 (build 12)</title>
+      <description><![CDATA[<ul>
+        <li>Bug fixes in iTunes metadata fetcher.</li>
+      </ul>]]></description>
+      <pubDate>Sat, 18 May 2013 16:10:15 -0000</pubDate>
+      <enclosure url="https://s3.amazonaws.com/flac2itunes/FLAC2iTunes-0.1.12.zip"
+        sparkle:dsaSignature="MCwCFGsPYyKsIOsXiixNPvej6nD1RpjyAhQ8lIc3id6euvj6junzfjpO3I7Sww=="
+        sparkle:shortVersionString="0.1"
+        sparkle:version="12"
+        length="508509"
+        type="application/octet-stream"
+      />
+    </item>
+    <item>
       <title>Version 0.1 (build 11)</title>
       <description><![CDATA[<ul>
         <li>Ability to fetch metadata from the iTunes Store (very experimental).</li>
